@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0   ;
+}
+* {
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+        "h h"
+        "n n"
+        "a as"
+        "f f";
+}
+
+header{
+    grid-area: h;
+    text-align: center;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+nav ul li{
+    display: inline;
+    padding-right: 1em;
+    padding: 0.5em;
+    color: blue;
+}
+
+nav ul{
+    padding: 0;
+}
+article img{
+    max-width: 200px;
+}
