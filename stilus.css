@@ -14,6 +14,7 @@ main{
         "n n"
         "a as"
         "f f";
+    background-color: #6E675F;
 }
 
 header{
@@ -27,10 +28,25 @@ nav{
 
 article{
     grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+    
+}
+
+.elemek{
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.elemek:hover{
+    border: 2px solid #E3B23C;
+    
 }
 
 aside{
     grid-area: as;
+    
 }
 
 footer{
@@ -41,12 +57,106 @@ nav ul li{
     display: inline;
     padding-right: 1em;
     padding: 0.5em;
-    color: blue;
+    color: #E3B23C;
+    margin: 1em;
+    font-weight: bold;
+}
+
+nav li:hover{
+    border: 2px solid #E3B23C;
+    border-radius: 10px;
+    cursor: pointer;
+    
 }
 
 nav ul{
     padding: 0;
 }
 article img{
-    max-width: 200px;
+    max-width: 100%;
+    max-height: 250px;
+}
+
+article div{
+   margin: 1em;
+   background-color: white;
+   text-align: center;
+}
+
+article h2{
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+
+.leiras{
+    text-align: left;
+    text-align: justify;
+    margin-left: 1em;
+}
+
+article button{
+    height: 1.5em;
+    width: 5em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.kosarbaar{
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    vertical-align: middle;
+    
+    vertical-align: middle;
+}
+
+.kosarbaar div{
+    text-align: left;
+}
+
+.ar{
+    display: inline;
+    text-align: right;
+}
+
+aside{
+    background-color: white;
+    text-align: center;
+    margin: 1em;
+}
+
+aside button{
+   margin-top: 300%;
+   margin-bottom: 1em;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    article{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .kosarbaar{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .kosarbaar div{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    article{
+        grid-template-columns: 1fr;
+    }
+
+    .kosarbaar{
+        grid-template-columns: 1fr;
+        
+    }
+
+    .kosarbaar div{
+        text-align: center;
+    }
 }
